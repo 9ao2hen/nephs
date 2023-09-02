@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @Slf4j
 @RestController
-@SpringBootApplication(scanBasePackages = "com.mervyn.nephs")
+@SpringBootApplication(scanBasePackages = {"com.mervyn.nephs.*.admin"})
 public class NephsAdminApplication {
 
     public static void main(String[] args) {

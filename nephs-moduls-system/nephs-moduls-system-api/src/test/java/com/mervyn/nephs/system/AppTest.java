@@ -1,4 +1,4 @@
-package com.mervyn;
+package com.mervyn.nephs.system;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

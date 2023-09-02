@@ -8,10 +8,14 @@
     </parent>
 
     <artifactId>nephs-moduls-health</artifactId>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
 
     <name>nephs-moduls-health</name>
     <url>http://maven.apache.org</url>
+    <modules>
+        <module>nephs-moduls-health-api</module>
+        <module>nephs-moduls-health-biz</module>
+    </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

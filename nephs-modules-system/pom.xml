@@ -4,17 +4,17 @@
     <parent>
         <groupId>com.mervyn</groupId>
         <artifactId>nephs</artifactId>
-        <version>1.0-SNAPSHOT</version>
+        <version>${revision}</version>
     </parent>
 
-    <artifactId>nephs-moduls-health</artifactId>
+    <artifactId>nephs-modules-system</artifactId>
     <packaging>pom</packaging>
 
-    <name>nephs-moduls-health</name>
+    <name>nephs-modules-system</name>
     <url>http://maven.apache.org</url>
     <modules>
-        <module>nephs-moduls-health-api</module>
-        <module>nephs-moduls-health-biz</module>
+        <module>nephs-modules-system-api</module>
+        <module>nephs-modules-system-biz</module>
     </modules>
 
     <properties>
@@ -22,7 +22,6 @@
     </properties>
 
     <dependencies>
-
 
     </dependencies>
 </project>

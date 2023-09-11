@@ -18,11 +18,17 @@
     </properties>
 
     <dependencies>
-       <!-- <dependency>
+
+        <dependency>
             <groupId>com.mervyn</groupId>
             <artifactId>nephs-common</artifactId>
             <version>${revision}</version>
-        </dependency>-->
+        </dependency>
+
+        <dependency>
+            <groupId>com.mervyn.nephs.system</groupId>
+            <artifactId>nephs-modules-system-biz</artifactId>
+        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -32,15 +38,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>cn.hutool</groupId>
-            <artifactId>hutool-core</artifactId>
         </dependency>
 
     </dependencies>

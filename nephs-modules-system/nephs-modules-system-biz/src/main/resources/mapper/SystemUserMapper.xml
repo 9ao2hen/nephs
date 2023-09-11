@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mervyn.nephs.system.mapper.SystemUserMapper">
+
+    <resultMap id="BaseResultMap" type="com.mervyn.nephs.system.domain.SystemUser">
+            <id property="pkId" column="pk_id" jdbcType="BIGINT"/>
+            <result property="id" column="id" jdbcType="BIGINT"/>
+            <result property="username" column="username" jdbcType="VARCHAR"/>
+            <result property="password" column="password" jdbcType="VARCHAR"/>
+            <result property="remark" column="remark" jdbcType="VARCHAR"/>
+            <result property="nickName" column="nick_name" jdbcType="VARCHAR"/>
+            <result property="mobile" column="mobile" jdbcType="VARCHAR"/>
+            <result property="email" column="email" jdbcType="VARCHAR"/>
+            <result property="gender" column="gender" jdbcType="TINYINT"/>
+            <result property="avatar" column="avatar" jdbcType="VARCHAR"/>
+            <result property="status" column="status" jdbcType="TINYINT"/>
+            <result property="deleted" column="deleted" jdbcType="BIT"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+            <result property="deleteTime" column="delete_time" jdbcType="TIMESTAMP"/>
+            <result property="createUser" column="create_user" jdbcType="VARCHAR"/>
+            <result property="updateUser" column="update_user" jdbcType="TIMESTAMP"/>
+            <result property="tenant" column="tenant" jdbcType="BIGINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        pk_id,id,username,
+        password,remark,nick_name,
+        mobile,email,gender,
+        avatar,status,deleted,
+        create_time,update_time,delete_time,
+        create_user,update_user,tenant
+    </sql>
+    <select id="getById" resultType="com.mervyn.nephs.system.domain.SystemUser">
+        select
+        <include refid="Base_Column_List"/>
+        from system_user
+        where deleted = '0'
+          and id = #{id,jdbcType=NUMERIC}
+        order by pk_id desc limit 1
+    </select>
+</mapper>

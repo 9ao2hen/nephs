@@ -1,10 +1,37 @@
 package com.mervyn.nephs.common;
 
+import com.mervyn.nephs.common.code.ErrorCode;
 import com.mervyn.nephs.common.code.SuccessCode;
 
 import java.util.function.Function;
 
 public final class Results {
+
+
+    public static Result<Void> error(ErrorCode code){
+        return new DefaultResult<Void>()
+                .setCode(code.code())
+                .setMessage(code.message());
+    }
+
+    public static Result<Void> error(int code,String eMsg){
+        return new DefaultResult<Void>()
+                .setCode(String.valueOf(code))
+                .setMessage(eMsg);
+    }
+
+    public static Result<Void> error(String eMsg,ErrorCode code){
+        return new DefaultResult<Void>()
+                .setCode(code.code())
+                .setMessage(eMsg);
+    }
+
+    public static <T> Result<T> success(T data,String msg) {
+        return new DefaultResult<T>()
+                .setCode(success().getCode())
+                .setMessage(msg)
+                .setData(data);
+    }
 
     /**
      * 成功

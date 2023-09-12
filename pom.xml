@@ -37,16 +37,16 @@
     </dependencyManagement>
 
     <repositories>
-        <repository>
+ <!--       <repository>
             <id>huawei</id>
             <name>huawei</name>
             <url>https://mirrors.huaweicloud.com/repository/maven/</url>
-        </repository>
-        <repository>
+        </repository>-->
+       <!-- <repository>
             <id>ali</id>
             <name>aliyun</name>
             <url>https://maven.aliyun.com/repository/public</url>
-        </repository>
+        </repository>-->
     </repositories>
 
     <build>

@@ -2,6 +2,7 @@ package com.mervyn.nephs.system.app;
 
 import com.mervyn.nephs.common.Result;
 import com.mervyn.nephs.common.Results;
+import com.mervyn.nephs.common.exception.ServiceException;
 import com.mervyn.nephs.system.converter.SystemUserConverter;
 import com.mervyn.nephs.system.domain.SystemUser;
 import com.mervyn.nephs.system.entity.SystemUserDTO;
@@ -29,8 +30,13 @@ public class SystemUserApplicationImpl implements SystemUserApplication {
 
     @Override
     public Result<SystemUserDTO> getUserById(String id) {
+        if (true){
+            throw new ServiceException(100,"出错了");
+        }
+
         SystemUser user = userService.getUser(Long.valueOf(id));
         SystemUserDTO systemUserDTO = SystemUserConverter.instance.toSystemUserDTO(user);
+
         return Results.success(systemUserDTO);
     }
 }

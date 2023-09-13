@@ -64,17 +64,7 @@
                 <version>1.18.24</version>
             </dependency>
 
-            <dependency>
-                <groupId>cn.hutool</groupId>
-                <artifactId>hutool-core</artifactId>
-                <version>5.8.20</version>
-            </dependency>
 
-            <dependency>
-                <groupId>cn.hutool</groupId>
-                <artifactId>hutool-all</artifactId>
-                <version>5.6.1</version>
-            </dependency>
 
             <dependency>
                 <groupId>org.apache.commons</groupId>
@@ -106,6 +96,11 @@
                 <version>1.4.2.Final</version>
             </dependency>
 
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>5.8.20</version>
+            </dependency>
 
 
             <dependency>
